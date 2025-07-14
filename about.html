@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Zameeruddin Ansari</title>
+  <style>
+    :root {
+      --bg-light: #f9f9f9;
+      --bg-dark: #1c1c1c;
+      --text-light: #222;
+      --text-dark: #f0f0f0;
+      --accent: #0e7c86;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg-light);
+      color: var(--text-light);
+      transition: background 0.4s, color 0.4s;
+    }
+
+    body.dark {
+      background: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    header {
+      background: var(--accent);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+      animation: fadeIn 0.8s ease-in;
+    }
+
+    h2 {
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 5px;
+      margin-top: 2rem;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .bio, .contact, .subjects, .youtube {
+      background: rgba(0, 0, 0, 0.03);
+      padding: 1rem;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+
+    .theme-toggle {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      padding: 8px 12px;
+      border: none;
+      background: var(--accent);
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .theme-toggle:hover {
+      background: #095a62;
+    }
+
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid var(--accent);
+      display: block;
+      margin: 20px auto;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #222;
+      color: #ccc;
+      margin-top: 3rem;
+    }
+
+    .youtube a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .youtube a:hover {
+      text-decoration: underline;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .back-home {
+      display: inline-block;
+      margin: 2rem auto 0;
+      padding: 10px 20px;
+      background-color: #0e7c86;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 16px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+
+  <header>
+    <h1>About Me</h1>
+    <p>Mohammad Zameeruddin Ansari – Physics Teacher & Educator</p>
+    <!-- 🔽 Change the image source to your real photo file path -->
+    <img src="arman.jpg" alt="Zameeruddin Ansari" class="profile-pic">
+  </header>
+
+  <div class="container">
+    <div class="bio">
+      <h2>Personal Profile</h2>
+      <p><strong>Name:</strong> Mohammad Zameeruddin Ansari</p>
+      <p><strong>Education:</strong></p>
+      <ul>
+        <li>📘 12th from Shahfaiz Inter College</li>
+        <li>🎓 Graduation in Physics from Aligarh Muslim University (AMU)</li>
+      </ul>
+      <p><strong>Profession:</strong> Passionate Physics Teacher dedicated to helping students understand complex topics with clarity and confidence.</p>
+    </div>
+
+    <div class="subjects">
+      <h2>Subjects I Teach</h2>
+      <ul>
+        <li>📘 Physics (Class 9–12, CBSE & State Boards)</li>
+        <li>⚙️ Mechanics, Thermodynamics, Electricity & Magnetism</li>
+        <li>🧪 NCERT + Competitive Level Preparation (NEET, JEE Mains)</li>
+      </ul>
+    </div>
+
+    <div class="youtube">
+      <h2>Online Classes</h2>
+      <p>Watch my video lectures and live classes on my YouTube channel:</p>
+      <p>🎥 <a href="https://www.youtube.com/@14mohammadzameeruddinansar50" target="_blank">Click here to visit my YouTube Channel</a></p>
+      <!-- 🔼 Change the link to your real channel -->
+    </div>
+
+    <div class="contact">
+      <h2>Contact</h2>
+      <p>📧 Email:arman242512@gmail.com</p>
+      <p>📍 Location: India</p>
+    </div>
+  </div>
+
+<a href="index.html" class="back-home">Back to Home</a>
+
+  <footer>
+    &copy; 2025 Mohammad Zameeruddin Ansari. All rights reserved.
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle("dark");
+    }
+  </script>
+
+</body>
+</html>

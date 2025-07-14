@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Testimonials with Images</title>
+  <style>
+    :root {
+      --bg-light: #f9f9f9;
+      --bg-dark: #1e1e1e;
+      --text-light: #222;
+      --text-dark: #eee;
+      --accent: #0e7c86;
+      --star-color: #f4c542;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg-light);
+      color: var(--text-light);
+      transition: background 0.4s, color 0.4s;
+    }
+
+    body.dark {
+      background: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    header {
+      background: var(--accent);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .theme-toggle {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      padding: 8px 12px;
+      border: none;
+      background: var(--accent);
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .theme-toggle:hover {
+      background: #095a62;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .testimonial {
+      background: rgba(0, 0, 0, 0.05);
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .testimonial:hover {
+      transform: scale(1.02);
+    }
+
+    .testimonial img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      border: 2px solid var(--accent);
+    }
+
+    .testimonial h3 {
+      margin: 0.3rem 0;
+      color: var(--accent);
+    }
+
+    .testimonial p {
+      font-style: italic;
+      line-height: 1.5;
+    }
+
+    .testimonial .stars {
+      margin: 0.5rem 0;
+      font-size: 18px;
+      color: var(--star-color);
+    }
+
+    .testimonial span {
+      font-weight: bold;
+      color: #555;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #222;
+      color: #ccc;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 600px) {
+      .testimonial {
+        padding: 1rem;
+      }
+    }
+
+    .back-home {
+      display: inline-block;
+      margin: 2rem auto 0;
+      padding: 10px 20px;
+      background-color: #0e7c86;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 16px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+
+  <header>
+    <h1>Testimonials</h1>
+    <p>What Students and Parents Say About Zameeruddin Ansari</p>
+  </header>
+
+  <div class="container">
+    <div class="testimonial-grid">
+
+      <div class="testimonial">
+        <img src="student1.jpg" alt="aditya yadav">
+        <h3>Excellent Teaching Style</h3>
+        <p>Sir explains every concept so clearly that Physics has become my favorite subject. He always uses real-life examples which make it easy to understand.</p>
+        <div class="stars">★★★★★</div>
+        <span>- aditya yadav, Class 12</span>
+      </div>
+
+      <div class="testimonial">
+        <img src="student2.jpg" alt="soni sing">
+        <h3>Great for JEE/NEET Prep</h3>
+        <p>Highly recommended for competitive exam aspirants. Sir focuses on both theory and MCQs. His test series helped me a lot!</p>
+        <div class="stars">★★★★☆</div>
+        <span>- soni sing, JEE Aspirant</span>
+      </div>
+
+      <div class="testimonial">
+        <img src="parent1.jpg" alt="Mrs. Fatima">
+        <h3>Very Sincere and Punctual</h3>
+        <p>My son’s interest in physics increased after joining sir’s class. He gives proper time to doubts and encourages students a lot.</p>
+        <div class="stars">★★★★★</div>
+        <span>- Mrs. Fatima, Parent</span>
+      </div>
+
+      <div class="testimonial">
+        <img src="student3.jpg" alt="Irfan Siddiqui">
+        <h3>Online Classes Are Amazing</h3>
+        <p>Even in online mode, the classes are interactive. Notes and recorded lectures help me revise anytime.</p>
+        <div class="stars">★★★★☆</div>
+        <span>- Irfan Siddiqui, Class 11</span>
+      </div>
+
+    </div>
+  </div>
+
+<a href="index.html" class="back-home">Back to Home</a>
+
+  <footer>
+    &copy; 2025 Zameeruddin Ansari – Testimonials Page
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle("dark");
+    }
+  </script>
+
+</body>
+</html>

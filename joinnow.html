@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Join Now</title>
+  <style>
+    :root {
+      --bg-light: #f9f9f9;
+      --bg-dark: #1e1e1e;
+      --text-light: #222;
+      --text-dark: #eee;
+      --accent: #0e7c86;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg-light);
+      color: var(--text-light);
+      transition: background 0.4s, color 0.4s;
+    }
+
+    body.dark {
+      background: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    header {
+      background: var(--accent);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .theme-toggle {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      padding: 8px 12px;
+      border: none;
+      background: var(--accent);
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      background: rgba(0, 0, 0, 0.05);
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: var(--accent);
+    }
+
+    form label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 0.7rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-top: 0.3rem;
+      font-size: 1rem;
+      background: #fff;
+    }
+
+    form textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    form button {
+      margin-top: 1.5rem;
+      padding: 0.8rem 1.5rem;
+      background: var(--accent);
+      color: white;
+      border: none;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .back-home {
+      display: inline-block;
+      margin: 2rem auto 0;
+      padding: 10px 20px;
+      background-color: #0e7c86;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    .back-container {
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #222;
+      color: #ccc;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="theme-toggle" onclick="document.body.classList.toggle('dark')">Toggle Theme</button>
+
+  <header>
+    <h1>Join Now</h1>
+    <p>Enroll today and start learning with Zameeruddin Ansari</p>
+  </header>
+
+  <div class="container">
+    <h2>Registration Form</h2>
+
+    <form action="https://formsubmit.io/send/arman252412@gmail.com" method="POST">
+      
+      <input name="_formsubmit_id" type="text" style="display:none">
+      <input type="hidden" name="_redirect" value="thanks.html">
+
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="class">Class</label>
+      <select id="class" name="class" required>
+        <option value="">Select your class</option>
+        <option value="9th">9th</option>
+        <option value="10th">10th</option>
+        <option value="11th">11th</option>
+        <option value="12th">12th</option>
+        <option value="Graduate">Graduate</option>
+      </select>
+
+      <label for="subject">Subject Interested In</label>
+      <input type="text" id="subject" name="subject" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Additional Notes</label>
+      <textarea id="message" name="message"></textarea>
+
+      <button type="submit">Join Now</button>
+    </form>
+
+    <!-- ✅ Back to Home Button inside container -->
+    <div class="back-container">
+      <a href="index.html" class="back-home">Back to Home</a>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Zameeruddin Ansari – Join Now Page
+  </footer>
+
+</body>
+</html>
