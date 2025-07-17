@@ -2,27 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Physics Academy</title>
-  <link rel="stylesheet" href="style.css"/>
-  <!-- AOS CSS -->
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
-  
-  <!-- AOS JS -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
-
-
-  <!-- Navigation Bar -->
   <nav class="navbar">
     <div class="logo">Physics Academy</div>
     <ul class="nav-links">
-      <li><a href="#">Home</a></li>
+      <li><a href="index.html">Home</a></li>
       <li><a href="course.html">Courses</a></li>
       <li><a href="about.html">About Us</a></li>
       <li><a href="galary.html">Gallery</a></li>
@@ -31,42 +21,37 @@
     </ul>
   </nav>
 
-  <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-text">
-      <h1>Master Physics with Us</h1>
-      <p>New Batches for NEET | JEE | Boards Starting Soon</p>
-      <a href="joinnow.html" class="cta-button">Join Now</a>
-    </div>
+    <h1>Master Physics with Us</h1>
+    <p>New Batches for NEET | JEE | Boards Starting Soon</p>
+    <a href="joinnow.html" class="cta-button">Join Now</a>
     <div class="hero-image">
-      <img src="Physicswallah.jpg" alt="Physics Study"/>
+      <img src="Physicswallah.jpg" alt="Physics Study">
     </div>
   </section>
 
-  <!-- Courses Section -->
-  <section class="courses">
+  <section class="courses" id="courses">
     <h2>Our Physics Courses</h2>
     <div class="course-grid">
       <div class="course-card">
-        <img src="https://images.unsplash.com/photo-1596495577886-d920f1fb7238?auto=format&fit=crop&w=400&q=80" alt="NEET Physics"/>
+        <img src="https://images.unsplash.com/photo-1596495577886-d920f1fb7238?auto=format&fit=crop&w=400&q=80" alt="NEET Physics" />
         <p>NEET Physics</p>
       </div>
       <div class="course-card">
-        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=400&q=80" alt="JEE Physics"/>
+        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=400&q=80" alt="JEE Physics" />
         <p>JEE Physics</p>
       </div>
       <div class="course-card">
-        <img src="11.jpg" alt="CBSE Physics"/>
+        <img src="11.jpg" alt="CBSE Physics" />
         <p>Class 11-12 CBSE Physics</p>
       </div>
       <div class="course-card">
-        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=400&q=80" alt="Conceptual Physics"/>
+        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=400&q=80" alt="Conceptual Physics" />
         <p>Concept Building</p>
       </div>
     </div>
   </section>
 
-  <!-- Demo Class -->
   <section class="demo">
     <h2>Watch a Demo Class</h2>
     <div class="video-container">
@@ -74,7 +59,6 @@
     </div>
   </section>
 
-  <!-- Testimonials -->
   <section class="testimonials" id="testimonials">
     <h2>What Our Students Say</h2>
     <div class="testimonial-carousel">
@@ -84,7 +68,6 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
   <section class="contact" id="contact">
     <h2>Contact Us</h2>
     <form class="contact-form">
@@ -95,72 +78,37 @@
     </form>
   </section>
 
-   <title>Google Map with Search</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
-    }
+  <section class="map-search">
+    <header>
+      <h2>Find Location on Google Map</h2>
+    </header>
+    <div class="search-box">
+      <input type="text" id="locationInput" placeholder="Enter location, e.g. Aligarh AMU" />
+      <button onclick="searchLocation()">Search</button>
+    </div>
+    <iframe id="mapFrame" src="https://www.google.com/maps?q=Aligarh&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </section>
 
-    header {
-      background-color: #0e7c86;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-    }
+  
+  <footer>
+    <p>&copy; 2025 Zameeruddin Ansari | All Rights Reserved</p>
+    <p>
+      <a href="about.html">About</a> |
+      <a href="contact.html">Contact</a> |
+      <a href="joinnow.html">Join Now</a> |
+      <a href="testimonials.html">Testimonials</a> |
+      <a href="course.html">Courses</a> |
+      <a href="galary.html">Gallery</a>
+    </p>
+    <p>
+      <a href="https://instagram.com/yourusername" target="_blank" style="color: #e1306c;"><i class="fab fa-instagram"></i> Instagram</a> |
+      <a href="https://twitter.com/yourusername" target="_blank" style="color: #1DA1F2;"><i class="fab fa-twitter"></i> Twitter</a>
+    </p>
+  </footer>
 
-    .search-box {
-      text-align: center;
-      margin: 1.5rem 0;
-    }
-
-    input[type="text"] {
-      width: 300px;
-      padding: 10px;
-      font-size: 16px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-
-    button {
-      padding: 10px 20px;
-      font-size: 16px;
-      background-color: #0e7c86;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-left: 10px;
-    }
-
-    iframe {
-      width: 100%;
-      height: 80vh;
-      border: none;
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <h1>Find Location on Google Map</h1>
-  </header>
-
-  <div class="search-box">
-    <input type="text" id="locationInput" placeholder="Enter location, e.g. Aligarh AMU" />
-    <button onclick="searchLocation()">Search</button>
-  </div>
-
-  <iframe
-    id="mapFrame"
-    src="https://www.google.com/maps?q=Aligarh&output=embed"
-    allowfullscreen=""
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
-
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
+    AOS.init();
     function searchLocation() {
       const input = document.getElementById("locationInput").value;
       const mapFrame = document.getElementById("mapFrame");
@@ -168,46 +116,5 @@
       mapFrame.src = `https://www.google.com/maps?q=${encodedLocation}&output=embed`;
     }
   </script>
-
-
-  <h1>Our Location</h1>
-
-  <!-- ✅ Google Map iframe (You can replace src with your location link) -->
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.147087920359!2d78.03727617443003!3d26.86019026245766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39747c6f2f09cd31%3A0x54e5fda22bfb5d1b!2sAligarh%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1710000000000"
-    allowfullscreen=""
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
-
-  <!-- Font Awesome CDN link (head ke andar lagao) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-
-<!-- 👇 Footer HTML -->
-<footer style="background:#222; color:#ccc; padding: 1.5rem 1rem; text-align: center; font-size: 14px;">
-  <p>&copy; 2025 Zameeruddin Ansari | All Rights Reserved</p>
-
-  <p>
-    <a href="about.html" style="color:#ccc; margin:0 10px;">About</a> |
-    <a href="contact.html" style="color:#ccc; margin:0 10px;">Contact</a> |
-    <a href="joinnow.html" style="color:#ccc; margin:0 10px;">Join Now</a> |
-    <a href="testimonials.html" style="color:#ccc; margin:0 10px;">testimonial</a> |
-    <a href="course.html" style="color:#ccc; margin:0 10px;">course</a> |
-    <a href="galary.html" style="color:#ccc; margin:0 10px;">galary</a> |
-  </p>
-
-  <p style="margin-top: 10px;">
-    <a href="https://instagram.com/yourusername" target="_blank" style="color: #e1306c; margin: 0 10px;">
-      <i class="fab fa-instagram"></i> Instagram
-    </a>
-    |
-    <a href="https://twitter.com/yourusername" target="_blank" style="color: #1DA1F2; margin: 0 10px;">
-      <i class="fab fa-twitter"></i> Twitter
-    </a>
-  </p>
-</footer>
-
-</footer>
-
 </body>
 </html>
