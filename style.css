@@ -27,10 +27,11 @@ body {
 
 .logo {
   font-weight: bold;
-  color: #3b3b98;
-  font-size: 22px;
-  animation: moveRight 2s ease-in-out infinite;
+  width: 100px;
+  height: 100px;
+  background: orange;
   position: relative;
+  animation: moveRight 2s ease-in-out infinite;
 }
 @keyframes moveRight {
   0% { left: 0; }
