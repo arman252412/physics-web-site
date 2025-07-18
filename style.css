@@ -27,6 +27,7 @@ body {
 
 .logo {
  color:blue;
+   font-weight: bold;
 }
 
 .nav-links {
