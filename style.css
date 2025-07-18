@@ -29,6 +29,15 @@ body {
   font-weight: bold;
   color: #3b3b98;
   font-size: 22px;
+  animation: moveRight 2s ease-in-out infinite;
+  position: relative;
+}
+@keyframes moveRight {
+  0% { left: 0; }
+  50% { left: 100px; }
+  100% { left: 0; }
+}
+
 }
 
 .nav-links {
