@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Us</title>
+  <title>Classy Contact Form</title>
   <style>
     :root {
       --bg-light: #f9f9f9;
@@ -16,8 +16,8 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: var(--bg-light);
-      color: var(--text-light);
+      background: linear-gradient(to top, #ffe2a0, #3a015c);
+      color: white;
       transition: background 0.4s, color 0.4s;
     }
 
@@ -43,67 +43,73 @@
       color: white;
       border-radius: 5px;
       cursor: pointer;
+      z-index: 1000;
     }
 
-    .theme-toggle:hover {
-      background: #095a62;
+    .form-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      max-width: 1200px;
+      margin: 3rem auto;
+      padding: 1rem;
     }
 
-    .container {
-      max-width: 700px;
-      margin: 2rem auto;
-      padding: 1.5rem;
-      background: rgba(0, 0, 0, 0.05);
+    .left, .right {
+      flex: 1;
+      min-width: 300px;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
       border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
     h2 {
-      text-align: center;
-      margin-bottom: 1.5rem;
-      color: var(--accent);
+      margin-bottom: 1rem;
+      color: #fff;
     }
 
-    form label {
-      display: block;
-      margin-top: 1rem;
-      font-weight: bold;
-    }
-
-    form input, form textarea {
-      width: 100%;
-      padding: 0.7rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      margin-top: 0.3rem;
-      font-size: 1rem;
-      background: #fff;
-    }
-
+    form input,
     form textarea {
-      resize: vertical;
-      min-height: 100px;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
     }
 
-    form button {
-      margin-top: 1.5rem;
-      padding: 0.8rem 1.5rem;
-      background: var(--accent);
+    textarea {
+      height: 100px;
+      resize: vertical;
+    }
+
+    button {
+      background-color: #5e0c84;
       color: white;
+      padding: 10px 15px;
       border: none;
-      font-size: 1rem;
       border-radius: 5px;
       cursor: pointer;
     }
 
-    form button:hover {
-      background: #095a62;
+    button:hover {
+      background-color: #450a63;
     }
 
-    .info {
-      margin-top: 2rem;
-      text-align: center;
-      color: #666;
+    iframe {
+      width: 100%;
+      border: none;
+      border-radius: 10px;
+    }
+
+    .social {
+      margin-top: 20px;
+    }
+
+    .icons a img {
+      width: 30px;
+      margin-right: 10px;
     }
 
     footer {
@@ -111,15 +117,14 @@
       padding: 1rem;
       background: #222;
       color: #ccc;
-      margin-top: 3rem;
     }
 
-    @media (max-width: 600px) {
-      .container {
-        padding: 1rem;
-        margin: 1rem;
+    @media (max-width: 768px) {
+      .form-wrapper {
+        flex-direction: column;
       }
     }
+
     .back-home {
       display: inline-block;
       margin: 2rem auto 0;
@@ -138,40 +143,55 @@
   <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
 
   <header>
-    <h1>Contact Us</h1>
+    <h1>Classy Contact Form</h1>
     <p>We'd love to hear from you!</p>
   </header>
 
-  <div class="container">
-    <h2>Send a Message</h2>
+  <div class="form-wrapper">
+    <!-- Left: Contact Form -->
+    <div class="left">
+      <h2>Contact Us!</h2>
+      <form action="https://formspree.io/f/xwpqkpaz" method="POST">
+        <input type="text" name="name" placeholder="Name" required />
+        <input type="text" name="company" placeholder="Company" />
+        <input type="tel" name="phone" placeholder="Telephone" />
+        <input type="email" name="email" placeholder="Email" required />
+        <textarea name="message" placeholder="Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
 
-    <!-- ✅ Connected to Email using Formsubmit.io -->
-    <form action="https://formspree.io/f/xwpqkpaz" method="POST">
+    <!-- Right: Subscribe, Map, Social -->
+    <div class="right">
+      <div class="subscribe">
+        <h2>Subscribe</h2>
+        <form>
+          <input type="email" placeholder="Email Address" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
 
-      
-      <!-- Hidden anti-spam field -->
-      <input name="_formsubmit_id" type="text" style="display:none">
+      <div class="location">
+        <h2>Our Location</h2>
+        <p>Reach Us</p>
+        <iframe src="https://maps.google.com/maps?q=Ghazipur%20Uttar%20Pradesh&t=&z=13&ie=UTF8&iwloc=&output=embed"
+          height="200" allowfullscreen loading="lazy"></iframe>
+      </div>
 
-      <label for="name">Your Name</label>
-      <input type="text" id="name" name="name" placeholder="Enter your name" required>
-
-      <label for="email">Email Address</label>
-      <input type="email" id="email" name="email" placeholder="Enter your email" required>
-
-      <label for="message">Your Message</label>
-      <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
-
-      <button type="submit">Send Message</button>
-    </form>
-
-    <div class="info">
-      <p><strong>Email:</strong> arman252412@gmail.com</p>
-      <p><strong>Location:</strong> ghazipur, Uttar Pradesh</p>
-      <p><strong>Phone:</strong> +91-8738022232</p>
+      <div class="social">
+        <h2>Stay In Touch</h2>
+        <p>Social Icons</p>
+        <div class="icons">
+          <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/145/145802.png" alt="Facebook"></a>
+          <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/145/145812.png" alt="Twitter"></a>
+          <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="Pinterest"></a>
+          <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/145/145808.png" alt="LinkedIn"></a>
+        </div>
+      </div>
     </div>
   </div>
 
-<a href="index.html" class="back-home">Back to Home</a>
+  <a href="index.html" class="back-home">Back to Home</a>
 
   <footer>
     &copy; 2025 Zameeruddin Ansari – Contact Page
