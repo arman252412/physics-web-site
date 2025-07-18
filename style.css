@@ -26,12 +26,11 @@ body {
 }
 
 .logo {
+ position: relative;
+  animation: slideRight 4s linear infinite;
+  font-size: 24px;
+  color: #8e24aa;
   font-weight: bold;
-  width: 10px;
-  height: 10px;
-  background: orange;
-  position: relative;
-  animation: moveRight 2s ease-in-out infinite;
 }
 @keyframes moveRight {
   0% { left: 0; }
