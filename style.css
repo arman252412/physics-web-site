@@ -27,8 +27,8 @@ body {
 
 .logo {
   font-weight: bold;
-  width: 100px;
-  height: 100px;
+  width: 10px;
+  height: 10px;
   background: orange;
   position: relative;
   animation: moveRight 2s ease-in-out infinite;
