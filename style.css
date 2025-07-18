@@ -28,6 +28,7 @@ body {
 .logo {
  color:blue;
    font-weight: bold;
+  background: linear-gradient(135deg, #5f27cd, #feca57);
 }
 
 .nav-links {
